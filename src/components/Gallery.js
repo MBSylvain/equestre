@@ -1,54 +1,16 @@
 import React, { useState } from "react";
 
 const allImages = [
-  {
-    src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-    style: "western",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
-    style: "classique",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
-    style: "concours",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
-    style: "classique",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80",
-    style: "western",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
-    style: "concours",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1518715308788-327f6b0037a7?auto=format&fit=crop&w=400&q=80",
-    style: "western",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=400&q=80",
-    style: "classique",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80",
-    style: "concours",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80",
-    style: "western",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1518715308788-327f6b0037a7?auto=format&fit=crop&w=400&q=80",
-    style: "classique",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80",
-    style: "concours",
-  },
+  { src: "https://images.pexels.com/photos/52500/horse-herd-fog-nature-52500.jpeg", style: "western" },
+  { src: "https://images.pexels.com/photos/209067/pexels-photo-209067.jpeg", style: "classique" },
+  { src: "https://images.pexels.com/photos/162203/horse-animal-nature-mammal-162203.jpeg", style: "concours" },
+  { src: "https://images.pexels.com/photos/216883/pexels-photo-216883.jpeg", style: "western" },
+  { src: "https://images.pexels.com/photos/52500/horse-herd-fog-nature-52500.jpeg", style: "classique" },
+  { src: "https://cdn.pixabay.com/photo/2017/01/20/00/30/horse-1995595_1280.jpg", style: "concours" },
+  { src: "https://cdn.pixabay.com/photo/2015/03/26/09/54/horse-690588_1280.jpg", style: "western" },
+  { src: "https://cdn.pixabay.com/photo/2016/11/29/09/32/animal-1867127_1280.jpg", style: "classique" },
+  { src: "https://cdn.pixabay.com/photo/2017/02/20/18/03/horse-2088277_1280.jpg", style: "concours" },
+  { src: "https://cdn.pixabay.com/photo/2016/03/23/18/25/horse-1274361_1280.jpg", style: "western" },
 ];
 
 const styles = [
@@ -70,8 +32,8 @@ export default function Gallery({ images }) {
 
   return (
     <div className="mb-8">
-      <h3 className="text-lg font-semibold mb-4">Galerie photos</h3>
-      <div className="mb-4 flex flex-wrap gap-2">
+      <h3 className="mb-4 text-lg font-semibold">Galerie photos</h3>
+      <div className="flex flex-wrap gap-2 mb-4">
         {styles.map((s) => (
           <button
             key={s.value}
@@ -86,13 +48,13 @@ export default function Gallery({ images }) {
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {filteredImages.map((img, idx) => (
           <img
             key={idx}
             src={img.src}
             alt={`Galerie ${idx + 1}`}
-            className="rounded shadow object-cover w-full h-48"
+            className="object-cover w-full h-48 rounded shadow"
           />
         ))}
       </div>
