@@ -71,6 +71,36 @@ export default function EquipePage() {
             événements du club.
           </p>
         </div>
+        {/* Palefrenier */}
+        <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+          <img
+            src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=300&q=80"
+            alt="Palefrenier du club"
+            className="w-32 h-32 object-cover rounded-full mb-4"
+          />
+          <h2 className="text-xl font-semibold mb-1">Lucas Bernard</h2>
+          <div className="text-purple-700 font-medium mb-2">Palefrenier</div>
+          <p className="text-gray-700 text-center">
+            Lucas veille au bien-être des chevaux et à l’entretien quotidien des
+            installations.
+          </p>
+        </div>
+        {/* Animatrice poney club */}
+        <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+          <img
+            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80"
+            alt="Animatrice poney club"
+            className="w-32 h-32 object-cover rounded-full mb-4"
+          />
+          <h2 className="text-xl font-semibold mb-1">Emma Rousseau</h2>
+          <div className="text-orange-700 font-medium mb-2">
+            Animatrice poney club
+          </div>
+          <p className="text-gray-700 text-center">
+            Emma encadre les plus jeunes cavaliers et anime les ateliers
+            découverte autour du poney.
+          </p>
+        </div>
       </div>
     </section>
   );
